@@ -1,10 +1,5 @@
-const firstIndex = str.indexOf(c);
-const lastIndex = str.lastIndexOf(c);
-
-if (firstIndex === -1) {
-    return -1;
-} else if (firstIndex === lastIndex) {
-    return 0;
-} else {
-    return lastIndex - firstIndex;
+function firstToLast(str, c) {
+    var first = str.indexOf(c),
+        last = str.lastIndexOf(c);
+    return first == -1 ? -1 : last - first;
 }
