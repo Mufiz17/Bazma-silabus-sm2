@@ -82,19 +82,3 @@ CREATE TABLE library (
     isbn BIGINT,
     harga INT
 );
-
-INSERT INTO library (Kategori, judul, deskripsi, penulis, penerbit, tahun_terbit, jumlah_halaman, batas_umur, isbn, harga)
-VALUES 
-('Fiksi', 'Judul Buku 1', 'Deskripsi buku 1', 'Penulis 1', 'Penerbit 1', 2022, 300, 18, 1234567890, 50),
-('Non-Fiksi', 'Judul Buku 2', 'Deskripsi buku 2', 'Penulis 2', 'Penerbit 2', 2020, 250, 16, 9876543210, 40),
-('Fiksi', 'Judul Buku 3', 'Deskripsi buku 3', 'Penulis 3', 'Penerbit 3', 2021, 400, 20, 1122334455, 60);
-
-
- UPDATE library             
-    -> SET kategori = 
-    -> case
-    -> when id = 1 then 'Coding hitz'
-    -> when id = 2 then 'Coding hitz'                               
-    -> when id = 3 then 'Coding hitz' 
-    -> end 
-    -> where id in (1,2,3);
