@@ -55,3 +55,8 @@ select * from (any) order by  (column name) asc/desc
 
 ### membatasi jumlah data
 select from any limit any
+
+### like
+like '%any' huruf depan
+like 'any%' huruf belakang
+like '%any%'  semua karakter
