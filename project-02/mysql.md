@@ -28,8 +28,7 @@ CREATE TABLE Peminjaman (
     tanggal_peminjaman DATE,
     tanggal_pengembalian DATE,
     status_pengembalian ENUM('dipinjam', 'dikembalikan'),
-    FOREIGN KEY (id_buku) REFERENCES Buku(id_buku),
-    FOREIGN KEY (id_anggota) REFERENCES Anggota(id_anggota)
-    ON DELETE CASCADE
+    FOREIGN KEY (id_buku) REFERENCES Buku(id_buku) ON DELETE CASCADE,
+    FOREIGN KEY (id_anggota) REFERENCES Anggota(id_anggota) ON DELETE CASCADE
 );
 ```
