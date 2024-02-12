@@ -1,5 +1,5 @@
 # CREATE TABEL Buku
-```mysql
+``` sql
 CREATE TABLE Buku (
    id_buku INT AUTO_INCREMENT PRIMARY KEY,
    judul VARCHAR(255),
@@ -11,7 +11,7 @@ CREATE TABLE Buku (
 ```
 
 # CREATE TABEL Anggota
-```mysql
+``` sql
 CREATE TABLE Anggota (
     id_anggota INT AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(255),
@@ -20,7 +20,7 @@ CREATE TABLE Anggota (
 );
 ```
 # CREATE TABEL Peminjaman
-```mysql
+``` sql
 CREATE TABLE Peminjaman (
     id_peminjaman INT AUTO_INCREMENT PRIMARY KEY,
     id_buku INT,
