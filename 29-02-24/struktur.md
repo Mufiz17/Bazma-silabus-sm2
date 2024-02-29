@@ -1,0 +1,7 @@
+- instal npm init -y ✔
+- ubah main pada package.json dari index.js menjadi app.js ✔
+- buat file app.js ✔
+- buat folder  db/connection.js ✔
+- Menginstall npm install express body-parser mysql2 cors ✔
+- Menginstall npm install -g nodemon ✔
+- Membuat file dengan nama .gitignore
