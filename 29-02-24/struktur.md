@@ -4,4 +4,17 @@
 - buat folder  db/connection.js ✔
 - Menginstall npm install express body-parser mysql2 cors ✔
 - Menginstall npm install -g nodemon ✔
-- Membuat file dengan nama .gitignore
+- Membuat file dengan nama .gitignore ✔
+- konfigurasi db/connection.js ke mysql ✔
+- konfigurasi app,js ✔
+- Membuat table todo: id, title, description ✔
+    -- id INT PRIMARY KEY AUTO_INCREMENT, ✔
+    -- title VARCHAR(255) NOT NULL, ✔
+    -- description TEXT; ✔
+- jalankan nodemonnya ✔
+- konfigurasi membaca file todo rest api ✔
+- Menjalankan get todos menggunakan thunder client ✔
+- Konfigurasi menambahkan data rest api ✔
+- Menjalankan menambahkan data baru todo rest api menggunakan thunder clients ✔
+    -- setting headers = accept = aplication/json ✔
+    -- setting headers = Content-Type = aplication/json ✔
