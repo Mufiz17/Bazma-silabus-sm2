@@ -1,0 +1,33 @@
+- instal npm init -y ✔
+- ubah main pada package.json dari index.js menjadi app.js ✔
+- buat file app.js ✔
+- buat folder  db/connection.js ✔
+- Menginstall npm install express body-parser mysql2 cors ✔
+- Menginstall npm install -g nodemon ✔
+- Membuat file dengan nama .gitignore ✔
+- konfigurasi db/connection.js ke mysql ✔
+- konfigurasi app,js ✔
+- Membuat table todo: id, title, description ✔
+    -- id INT PRIMARY KEY AUTO_INCREMENT, ✔
+    -- title VARCHAR(255) NOT NULL, ✔
+    -- description TEXT; ✔
+- jalankan nodemonnya ✔
+- konfigurasi membaca file todo rest api ✔
+- Menjalankan get todos menggunakan thunder client ✔
+- Konfigurasi menambahkan data rest api ✔
+- Menjalankan menambahkan data baru todo rest api menggunakan thunder clients ✔
+    -- setting headers = accept = aplication/json ✔
+    -- setting content = Content-Type = aplication/json ✔
+    -- [Tugas] Membuat validation untuk mengirim data todo yang wajib diisikan, artinya validasi tsb wajib diisi
+- Membuat controllers
+    -- membuat file: TodoController.js
+    -- membuat const function getAllTodo
+    -- membuat const function storeTodo
+    -- membuat const function updateTodo
+    -- membuat const function showTodo
+    -- membuat const function deleteTodo
+- Membuat Routes
+    -- Membuat file: TodoRoute.js
+        -membuat getTodo [GET]
+-Konfigurasi app.js 
+    -- Mengubah Struktur kode todo => ['/api/todos'] (Get, Post, Put, Patch, Delete, Get/:id) 
