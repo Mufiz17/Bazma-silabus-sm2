@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
-const PORT = 6666;
+const PORT = 689;
 
 app.listen(PORT, (err) => {
     if (err) throw err;
