@@ -8,7 +8,9 @@ function createToken(name, clas, addres, hoby) {
 
 function verifyToken(token) {
     try {
-        return jwt.verify(token, scrtKey);
+        const decode = jwt.verify(token, scrtKey);
+        delete decode.iat;
+        return decode;
     } catch (err) {
         return err;
     }
@@ -23,6 +25,9 @@ const student = {
 }
 
 const token = createToken(student.name, student.clas, student.address, student.hoby);
-
 console.log('Token');
 console.log(token);
+
+const decodedData = verifyToken(token);
+console.log('Data Siswa:');
+console.log(decodedData);
