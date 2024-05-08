@@ -11,8 +11,4 @@ const connection = mysql.createPool({
     queueLimit: 0
 });
 
-connection.getConnection((err, conn) => {
-    if (err) throw err;
-    console.log(`Connected as id ${conn.threadId}`);
-    conn.release();
-});
+module.exports = connection;

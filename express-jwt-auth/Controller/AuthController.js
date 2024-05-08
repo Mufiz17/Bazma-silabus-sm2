@@ -15,5 +15,27 @@ async function register(req, res) {
         const errMsg = errors.array().map(error => ({
             [error.path]: error.msg
         }))
+        return res.status(422).json({
+            success: false,
+            message: "Validation Error",
+            errors: errMsg
+        });
+    }
+    const { name, email, password, phone } = req.body;
+    try {
+        const result = await registerUser(name, email, password, phone)
+        if (result.success) {
+            res.status(201).json({
+                success: result.success,
+                message: result.message,
+                data: result.id
+            })
+        } else {
+            res.status(500).json({ error: result.success })
+        }
+    } catch (error) {
+        return 'Error in registration';
     }
 }
+
+module.exports = { register }
