@@ -8,4 +8,12 @@ async function register(req, res) {
         body('password').notEmpty().isPassword().withMessage("Password is required"),
         body('phone').notEmpty().isPhone().withMessage("Phone is required")
     ]
+    await Promise.all(validation.map((v) => v.run(req)));
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+        const errMsg = errors.array().map(error => ({
+            [error.path]: error.msg
+        }))
+    }
 }
