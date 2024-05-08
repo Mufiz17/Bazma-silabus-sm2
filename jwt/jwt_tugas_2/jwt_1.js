@@ -1,8 +1,8 @@
 const jwt = require('jsonwebtoken');
 const scrtKey = '@smktibazma';
 
-function createToken(name, clas, address, hoby) {
-    const data = { name, clas, address, hoby };
+function createToken(nama, alamat, nomorKontak) {
+    const data = { nama, alamat, nomorKontak };
     return jwt.sign(data, scrtKey);
 };
 
