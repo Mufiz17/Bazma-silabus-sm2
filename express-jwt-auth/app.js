@@ -2,13 +2,20 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
-const AuthRoute = require('./Routes/AuthRoute')
 
+// Middleware
 app.use(cors());
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/api/auth', AuthRoute)
 
-const PORT = 3333 || process.env.PORT;
+// Routes
+const AuthRoute = require('./Routes/AuthRoute');
+const TodoRoute = require('./Routes/TodoRoute');
+app.use("/api/auth", AuthRoute);
+app.use("/api", TodoRoute);
+
+// Server
+const PORT = process.env.PORT || 3333;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
